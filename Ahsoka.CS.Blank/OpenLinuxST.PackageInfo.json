@@ -1,0 +1,24 @@
+{
+  "version": "1.247.0.0",
+  "applicationType": "Script",
+  "userInterfaceType": "None",
+  "execCommand": "Ahsoka.CS.Blank",
+  "packageName": "STDemoPackage",
+  "packageApplicationFolder": "publish",
+  "packageOutputDirectory": "..\\..\\Source\\Repos\\Ahsoka.Platform\\Ahsoka.Demo\\Ahsoka.CS.Blank\\publish",
+  "isFactoryInstall": false,
+  "debugMode": true,
+  "teamId": "00000000-0000-0000-0000-000000000000",
+  "dotNetInfo": {
+    "projectPath": "Ahsoka.CS.Blank.csproj",
+    "publishProfile": "Properties\\PublishProfiles\\LinuxProfile.pubxml"
+  },
+  "canCalibrationFiles": {},
+  "packageType": "opvEncrypted",
+  "packageStructureVersion": 1,
+  "platformFamily": "OpenViewLinux",
+  "platformQualifier": "ST4",
+  "securityMode": "None",
+  "applicationId": "00000000-0000-0000-0000-000000000000",
+  "components": []
+}

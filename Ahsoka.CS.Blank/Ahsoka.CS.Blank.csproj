@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<Platforms>AnyCPU;x64</Platforms>
+		<TargetFramework>net7.0</TargetFramework>
+	</PropertyGroup>
+
+
+	<ItemGroup Label="System Reference for Main" Condition="'$(GitVersion_BranchName)' == 'main' AND '$(SolutionName)' != 'Ahsoka.Platform'">
+		<PackageReference Include="Ahsoka.CommandLine" Version="1.*" />
+		<PackageReference Include="Ahsoka.Core" Version="1.*" />
+	</ItemGroup>
+
+	<ItemGroup Label="System Reference for Branches" Condition="'$(GitVersion_BranchName)' != 'main' AND '$(SolutionName)' != 'Ahsoka.Platform'">
+		<PackageReference Include="Ahsoka.CommandLine" Version="1.*-*" />
+		<PackageReference Include="Ahsoka.Core" Version="1.*-*" />
+	</ItemGroup>
+
+	<ItemGroup Label="Development References" Condition="'$(SolutionName)' == 'Ahsoka.Platform'">
+		<ProjectReference Include="..\..\Ahsoka.Platform\Ahsoka.Core\Ahsoka.Core.csproj" Condition="'$(SolutionName)' == 'Ahsoka.Platform'" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\DotnetBleServer\DotnetBleServer.csproj" />
+	</ItemGroup>
+</Project>
