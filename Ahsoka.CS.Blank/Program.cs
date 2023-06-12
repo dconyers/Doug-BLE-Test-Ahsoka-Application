@@ -7,7 +7,7 @@ using System;
 using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
-
+using Tmds.DBus;
 
 namespace Ahsoka.Base;
 
@@ -39,12 +39,17 @@ public class Program
 
         Task.Run(async () =>
         {
-            using (var serverContext = new ServerContext())
+//            using (var serverContext = new ServerContext())
             {
                 Console.WriteLine("About to call ServerContext Connect");
-                await serverContext.Connect();
+                //await serverContext.Connect();
+                
+                Connection dougConnection = new Connection(Address.System);
+                await dougConnection.ConnectAsync();
+
+
                 Console.WriteLine("About to call SampleAdvertisement.RegisterSampleAdvertisement");
-                await SampleAdvertisement.RegisterSampleAdvertisement(serverContext);
+                await SampleAdvertisement.RegisterSampleAdvertisement(dougConnection);
                 Console.WriteLine("Done w/Call to SampleAdvertisement.RegisterSampleAdvertisement");
 
                 Console.WriteLine("Press CTRL+C to quit");
