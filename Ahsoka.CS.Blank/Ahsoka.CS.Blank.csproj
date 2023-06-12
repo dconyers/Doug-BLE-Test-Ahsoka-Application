@@ -23,6 +23,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\DotnetBleServer\DotnetBleServer.csproj" />
+	  <PackageReference Include="Tmds.DBus" Version="0.15.0" />
 	</ItemGroup>
 </Project>

@@ -1,6 +1,4 @@
 ﻿using System.Threading.Tasks;
-using DotnetBleServer.Core;
-using DotnetBleServer.Advertisements;
 using System.Collections.Generic;
 using System;
 using Tmds.DBus;
@@ -19,7 +17,7 @@ namespace Ahsoka.Base
             {
                 Type = "peripheral",
                 ServiceUUIDs = new[] { "12345678-1234-5678-1234-56789abcdef0"},
-                LocalName = "Berni",
+                LocalName = "Doug",
             };
 
             var advertisement = new Advertisement("/org/bluez/example/advertisement0", advertisementProperties);
